@@ -1,23 +1,23 @@
-//your JS code here. If required.
 
-let squares = document.querySelectorAll(".square");
+    let squares = document.querySelectorAll(".square");
 
-squares.forEach((square) => {
-  square.addEventListener("mouseenter", () => {
-    squares.forEach((sq) => {
-      if (sq === square) {
-        sq.style.backgroundColor = "#E6E6FA"; // Lavender
-      } else {
-        sq.style.backgroundColor = "#6F4E37"; // Coffee
-      }
+
+    squares.forEach((i) => {
+
+      i.addEventListener("mouseenter", () => {
+        squares.forEach((j) => {
+          if (j === i) {
+            j.style.backgroundColor = "#E6E6FA";
+          } else {
+            j.style.backgroundColor = "#6F4E37"; 
+        });
+      });
+
+      
+      i.addEventListener("mouseleave", () => {
+        squares.forEach((j) => {
+          j.style.backgroundColor = "#E6E6FA";
+        });
+      });
+
     });
-  });
-
-  square.addEventListener("mouseleave", () => {
-    squares.forEach((sq) => {
-      sq.style.backgroundColor = "#E6E6FA"; // Reset all to Lavender
-    });
-  });
-});
-
-});
